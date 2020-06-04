@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Vidaloka&display=swap");
+
+#titleContainer {
+  font-family: "Vidaloka", serif;
+}
+
+#storyContainer p {
+  font-family: "Amiri", serif;
+  padding: 1em;
+  border-radius: 1ex;
+  background: #f8f8f8;
+  margin: 0ex;
+  margin-bottom: 1ex;
+  animation: expand 0.3s ease-out;
+  hyphens: auto;
+}
+
+#choicesContainer button {
+  border-radius: 1ex;
+  background: #eee;
+  transition: 0.3s;
+  margin-right: 1ex;
+  margin-top: 1ex;
+
+  animation: expand 0.3s ease-in-out;
+}
+
+#choicesContainer button:hover {
+  background: #fff;
+}
+
+@keyframes expand {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+body {
+  max-width: 32em;
+  margin-bottom: 2em;
+}

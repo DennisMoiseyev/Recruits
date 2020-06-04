@@ -1,0 +1,95 @@
+title = "The Recruits"
+
+introduction = ["You awake early morning at seven a.m. and find yourself lying on the grass near the base of the UCSC campus. It's unclear to
+you how you ended up there. The last thing you can recollect was coming to your T.A.'s office hours to receive some last minute aid on homework 
+before the major teaching strike was to ensue. There are other students lying around you, now slowly coming to and looking 
+around with the same perplexity.", "Suddenly, you hear a mass wave of people marching towards the base carrying bullhorns and giant signs, displaying
+such rhetoric as 'Down With the UC.' They're heading your way with the aim to occupy the intersection at the base
+of campus. You and the other undergrads are conveniently caught in their crossfire.", "A slew of police emerge, approximately fifty to a hundred donned 
+in riot gear. They align themselves with one another in standard police formation with their long batons at the ready.", "You support their cause, but remain 
+unsure if you should join the crowd or leave before matters escalate."]
+
+[storylets.proceed]
+name="Join"
+description=["You see immediately that students are linking arms with half a dozen others and are beginning to sit in circle formation around the boundaries of the intersection. 
+You decide to follow suit.","You link up with a group of undergraduates and sit down, each of you huddled close together. The police are sternly staring you down and intimidating 
+you and the other undergraduates with their batons and menacing demeanor."]
+conflicts="leave"
+
+[storylets.leave]
+name="Go back to campus"
+description =["You fully support the efforts of the grad students, but participating in the strike is heavy on you right now and it still feels all too strange
+as to how you ended up in the middle of it in the first place.","You move past the crowd of students and start ushering your way back to campus. You then stumble upon a peculiar 
+gray tent spanning the length of a school bus."]
+conflicts= "proceed"
+
+[storylets.tent]
+name="Explore tent"
+description=["You enter the tent and walk into a sinister scene. Dozens of undergraduate students, some of who you recognize, are lying unconscious on the ground covered in 
+blankets. There's a tall man in a white laboratory coat administering an intravenous solution to each of the unresponsive students.", "He turns his face and you see that the man 
+is your T.A. from a previous quarter. His expression is disgruntled and he starts walking towards you menacingly, a fresh syringe in hand.", "You become stiff with fear and pace backwards 
+to escape from the tent. Before you are mere inches away from the opening, you bump into another figure and quickly turn around. It appears to be another T.A. in a white lab coat. And 
+suddenly, you see nothing but darkness."]
+requires="leave"
+conflicts="continue"
+
+[storylets.continue]
+name="Continue to campus"
+description=["The tent gives you an eerie feeling, so you choose to ignore it and continue making your way back. You shortly hear another clamor of voices
+coming your way. More protestors with signs are hollering and running in your direction. You are forced to turn away and
+run back in the direction you were trying to avoid.", "You end up back on the grass where you initially awoke. The protesters are clashing with the police 
+and you see many protesters being detained and dragged by police. Batons are being swung on undergraduate's heads and there's heavy pushback from the police.", 
+"Caught off guard by what you are witnessing, you get pushed right onto a police officer by another person and he hits your right side with the baton. The officer then proceeds to arrest you and carry you 
+off to the side. You are put in line with other handcuffed undergraduates. You suddenly realize there are more undergraduate
+students involved in this protest and that they've all arrived here under the strangest of circumstances."]
+requires="leave"
+conflicts="tent"
+
+[storylets.recover]
+name="The next morning"
+description=["You awake early morning at seven a.m. and find yourself lying on the grass near the base of the UCSC campus. It's unclear to
+you how you ended up there. The last thing you can recollect was coming to your T.A.'s office hours to receive some last minute aid on homework 
+before the major teaching strike was to ensue. There are other students lying around you, now slowly coming to and looking 
+around with the same perplexity.", "It oddly feels like deja vu."]
+requires="tent"
+
+[storylets.jail]
+name="The next day"
+description=["After spending a night in prison, the police released you. You came back to the University to find that you have been removed 
+as means of disciplinary action and that your housing was reassigned to a graduate student.", "It was then that you realized
+what their true endgame was. You were the involuntary recruit to their just cause and they achieved what they wanted through you."]
+requires="continue"
+
+[storylets.ignore]
+name="Stay together"
+description=["You are in full support the strike and no intimidation will cause you to leave. You are at the front lines
+and there is no point in ending it now. You take a stand with the other undergraduates.", "The officers give it a couple of minutes
+before forcing themselves into your circle and tearing you all apart. They strike you violently with their batons. You and your fellow 
+peers are being struck across the face and then dragged out through the street where police finally arrest you."]
+requires="proceed"
+conflicts="break"
+
+[storylets.break]
+name="Instigate"
+description=["You yell a derogatory remark at the police officers surrounding you, causing them to break up the circle formation
+you have formed with the other undergraduate students.", "They use excessive force and beat each of you continuously with their batons.
+They later separate you all and make individual arrests."]
+requires="proceed"
+conflicts="ignore"
+
+[storylets.night]
+name="The next day"
+description=["After spending a night in prison, the police released you. You came back to the University to find that you have been removed
+as means of disciplinary action and that your housing was reassigned to a graduate student.", "The whack on the head also helped bring back your
+memory. You recall that your T.A. caught you off guard as you were exiting the classroom and gave you a sedative that made you lose consciousness.",
+"It was then that you realized what their true endgame was. You were the involuntary recruit to their just cause and they achieved what they wanted through you."]
+requires="ignore"
+
+[storylets.nightalt]
+name="The next day"
+description=["After spending a night in prison, the police released you. You came back to the University to find that you have been removed
+as means of disciplinary action and that your housing was reassigned to a graduate student.", "The whack on the head also helped bring back your
+memory. You recall that your T.A. caught you off guard as you were exiting the classroom and gave you a sedative that made you lose consciousness.",
+"It was then that you realized what their true endgame was. You were the involuntary recruit to their just cause and they achieved what they wanted through you."]
+requires="break"
+
